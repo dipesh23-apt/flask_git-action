@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI pipeline build
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello Testing 1 2 3!
+
+      - name: Docker build Image
+        run: docker build -t flask_gitaction:latest
