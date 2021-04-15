@@ -1,3 +1,3 @@
 # flask_git-action
 
-Continuous Integration and Continuous Delivery (CI CD) pipeline using Github Actions 
+Continuous Integration and Continuous Delivery (CI CD)using Github Actions 
