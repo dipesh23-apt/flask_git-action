@@ -19,7 +19,7 @@ jobs:
       
 
       - name: Docker Build
-        run: docker build -t dipesh2301/flask_gitaction:latest
+        run: docker build -t dipesh2301/flask_gitaction:latest .
         
       - name: DockerHub Login
         run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
