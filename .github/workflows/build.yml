@@ -20,8 +20,8 @@ jobs:
 
       - name: Docker build Image
         run: docker build -t dipesh2301/flask_gitaction:latest .
-        
-      - name: Upload to Dockerhub after logging in
+      - name: DOCKERHUB login
         run: docker login -u ${{secretss.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_PASSWORD}}
-      - run: docker push dipesh2301/flask_gitaction:latest
+      - name: Docker push   
+        run: docker push dipesh2301/flask_gitaction:latest
         
