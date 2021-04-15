@@ -40,7 +40,7 @@ jobs:
          builder: ${{steps.buildx.outputs.name}}
          platforms: linux/amd64
          push: true
-         tags: ${{{secrets.DOCKERHUB_USERNAME}}/flask_gitaction:latest
+         tags: ${{ secrets.DOCKERHUB_USERNAME }}/flask_gitaction:latest
         
        
         
