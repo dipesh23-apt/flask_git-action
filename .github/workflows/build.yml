@@ -18,6 +18,14 @@ jobs:
       - name: Run a one-line script
         run: echo Hello Testing 1 2 3!
       
+      - name: Implementing Cache for Ubuntu
+      - uses: actions/cache@v2
+        with:
+            path: ~/.cache/pip
+            key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+            restore-keys: |
+                ${{ runner.os }}-pip-
+     
       - name: QEMU multiplatform
         uses: docker/setup-qemu-action@v1
       
